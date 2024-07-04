@@ -20,6 +20,41 @@ This project focuses on implementing and comparing various models including Visi
   - ViT(B)-Hyb-32x32-14
   - ViT-Hyb-32x32-14
 
+ ## Important Note: Update WandB init
+
+Ensure you update the WandB initialization in your scripts with your WandB API key and project details. The `wandb.init` function should be configured as follows in `utils/training.py`
+
+```python
+import wandb
+
+# Initialize a new run
+wandb.init(
+    project="Your_Project_Name",
+    entity="Your_WandB_Entity",
+    config={
+        "learning_rate": 0.001,
+        "epochs": 50,
+        "batch_size": 32,
+        # Add other hyperparameters as needed
+    }
+)
+
+# Example configuration
+wandb.init(
+    project="ViT_implementation",
+    entity="Your_WandB_Entity",  # Replace with your WandB entity or username
+    config={
+        "learning_rate": 0.0001,
+        "epochs": 14,
+        "batch_size": 16,
+        "model": "ViT-B-32x32-16-7"
+    }
+)
+
+# Finish the WandB run
+wandb.finish()
+```
+
 ## Optimizing Vision Transformer (ViT)
 
 ### Enhancements and Techniques
