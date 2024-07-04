@@ -77,7 +77,7 @@ class EncoderLayer(nn.Module):
         x = x + self.drop_path(self.ls1(self.attn(self.norm1(x))))
         x = x + self.drop_path(self.ls2(self.mlp(self.norm2(x))))
         return x
-
+```
 ## Performance Analysis
 
 ### Training Performance (7 Epochs)
@@ -137,17 +137,5 @@ class EncoderLayer(nn.Module):
 
 These inferences suggest that hybrid models leveraging both ResNet and Vision Transformer features might be a promising direction for future work. Additionally, managing resource consumption effectively while maintaining high performance is crucial for practical applications.
 
-## Storing the Images
 
-Store the images in the `images` folder within the project directory. The images should be named as follows:
 
-- Train (7 Epochs): `train_7_epochs.png`
-- Train (7 Epochs) Comparison: `train_7_epochs_comparison.png`
-- F1-Score: Hybrid vs ResNets vs ViT: `f1_score_hybrid_vs_resnets_vs_vit.png`
-- F1-Score: ViT vs BiT: `f1_score_vit_vs_bit.png`
-- GPU Memory Allocated: `gpu_memory_allocated.png`
-- Test Loss (7 Epochs): `test_loss_7_epochs.png`
-- Test Loss (14 Epochs): `test_loss_14_epochs.png`
-
-Ensure that the `images` directory is created in the root of your project directory and all images are stored accordingly.
-```
