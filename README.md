@@ -166,9 +166,9 @@ class EncoderLayer(nn.Module):
 
 ## Conclusion
 
-- **ViT Models**: Generally show high initial performance and stable improvements over time.
-- **Hybrid Models**: Demonstrate strong performance in both training and test metrics, indicating a good balance between resource usage and accuracy.
-- **BiT Models**: Show consistent improvements, particularly in longer training durations, and exhibit potential to match or exceed ViT performance with sufficient training.
+- **ViT Models**: ViT models generally show high initial performance and stable improvements over time. Their architecture allows for better handling of complex patterns in data, leading to superior accuracy and efficiency compared to traditional models like BiT.
+- **Hybrid Models**: Hybrid models, which combine the strengths of both ResNet and ViT, demonstrate exceptional performance in both training and test metrics. They offer a good balance between resource usage and accuracy, often surpassing both standalone ViT and BiT models.
+- **BiT Models**: While BiT models show consistent improvements, particularly in longer training durations, they often fall short of the performance metrics achieved by ViT and hybrid models. The inherent limitations in their architecture make it challenging for them to compete with the more advanced ViT models.
 
 These inferences suggest that hybrid models leveraging both ResNet and Vision Transformer features might be a promising direction for future work. Additionally, managing resource consumption effectively while maintaining high performance is crucial for practical applications.
 
